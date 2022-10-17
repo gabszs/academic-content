@@ -4,7 +4,7 @@ from collections import namedtuple
 class Dog:
     def __init__(self, name, race):
         self.name = name
-        self.__race = race
+        self.race = race
 
     def get_name_race(self):
         return self.name, self.__race
@@ -34,30 +34,51 @@ list_number = [33, 22, 44, 66, 77, 87, 32, 75, 12]
 list_specs_dog = [{'nome': 'rex', 'raca':'pitbull', id:0}]
 dct = {}
 
-for count, values in enumerate(list_dog):
-    nome = f'Cachorro{count}'
-    dct_loop = {nome:Dog(list_name_dog[count], list_dog[count])}
-    dct.update(dct_loop)
-
-
-lst = []1
-for count, values in enumerate(list_objects_dog):
-    lst.append(f'cachorro{count + 1}')
-
-print(lst)
-
-dct = {}
-for count, values in enumerate(lst):
-    dct_for = {values: list_objects_dog[count]}
-    dct.update(dct_for)
-print(dct)
+dog1 = Dog('Black', 'Pit')
+print(dog1.__dict__)
+dog1.peso = 77
+print(dog1.__dict__)
+del dog1.peso
+-
+print(dog1.__dict__)
 
 
 
 
 
-for count, values in dct.items():
-    print(values.get_name())
+
+
+
+
+
+
+
+
+
+# for count, values in enumerate(list_dog):
+#     nome = f'Cachorro{count}'
+#     dct_loop = {nome:Dog(list_name_dog[count], list_dog[count])}
+#     dct.update(dct_loop)
+#
+#
+# lst = []1
+# for count, values in enumerate(list_objects_dog):
+#     lst.append(f'cachorro{count + 1}')
+#
+# print(lst)
+#
+# dct = {}
+# for count, values in enumerate(lst):
+#     dct_for = {values: list_objects_dog[count]}
+#     dct.update(dct_for)
+# print(dct)
+#
+#
+#
+#
+#
+# for count, values in dct.items():
+#     print(values.get_name())
 
 
 
